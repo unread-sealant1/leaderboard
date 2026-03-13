@@ -1,6 +1,5 @@
 import { clearToken, getToken } from "./auth";
-
-const BASE = import.meta.env.VITE_API_URL;
+import API_BASE from "../lib/apiBase";
 
 export async function api(path, options = {}) {
   const token = getToken();
@@ -11,7 +10,7 @@ export async function api(path, options = {}) {
 
   if (token) headers.Authorization = `Bearer ${token}`;
 
-  const res = await fetch(`${BASE}${path}`, { ...options, headers });
+  const res = await fetch(`${API_BASE}${path}`, { ...options, headers });
   const data = await res.json().catch(() => ({}));
 
   if (!res.ok) {

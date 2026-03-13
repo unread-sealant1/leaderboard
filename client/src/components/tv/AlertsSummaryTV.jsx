@@ -1,12 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
+import API_BASE from "../../lib/apiBase";
 import "../../styles/tv.css";
 
 function displayTermLabel(value, fallback = "Term") {
   const text = String(value || "").trim() || fallback;
   return text.replace(/\bPhases\b/g, "Terms").replace(/\bPhase\b/g, "Term");
 }
-
-const BASE = import.meta.env.VITE_API_URL || "";
 
 const SEVERITY_DOT = {
   warning: "#F4A259",
@@ -89,7 +88,7 @@ export default function AlertsSummaryTV({ tvTeamScope = "all", phaseId }) {
 
     async function load() {
       try {
-        const url = new URL(`${BASE}/api/tv/alerts-summary`, window.location.origin);
+        const url = new URL(`${API_BASE}/api/tv/alerts-summary`, window.location.origin);
         if (phaseId) url.searchParams.set("phase", phaseId);
         if (tvTeamScope !== "all" && tvTeamScope) url.searchParams.set("teamId", tvTeamScope);
         const res = await fetch(url.toString());

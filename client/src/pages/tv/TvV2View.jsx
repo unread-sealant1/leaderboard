@@ -11,9 +11,9 @@ import CommentsScreen from "../../components/tv/CommentsScreen";
 import NotificationsScreen from "../../components/tv/NotificationsScreen";
 import WelcomeIntroScreen from "../../components/tv/WelcomeIntroScreen";
 import logo from "../../assets/ihub-logo.png";
+import API_BASE from "../../lib/apiBase";
 import "../../styles/tv.css";
 
-const BASE = import.meta.env.VITE_API_URL || "";
 const DEFAULT_TV_SCREENS = [
   "welcome_screen",
   "topic_team_dials",
@@ -118,7 +118,7 @@ export default function TvV2View() {
   const playlistRef = useRef(DEFAULT_TV_SCREENS);
 
   async function load() {
-    const res = await fetch(`${BASE}/api/tv/public`);
+    const res = await fetch(`${API_BASE}/api/tv/public`);
     const data = await res.json();
     setPayload(data);
 
@@ -144,7 +144,7 @@ export default function TvV2View() {
   async function advance() {
     const token = getToken();
     if (!token) throw new Error("TV not authenticated for server-driven advance");
-    const res = await fetch(`${BASE}/api/tv/advance`, {
+    const res = await fetch(`${API_BASE}/api/tv/advance`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: "{}"

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
+import API_BASE from "../../lib/apiBase";
 import "../../styles/tv.css";
-
-const BASE = import.meta.env.VITE_API_URL || "";
 
 export default function MetaSkillCommentsTV({
   phaseId,
@@ -17,7 +16,7 @@ export default function MetaSkillCommentsTV({
 
     async function load() {
       try {
-        const url = new URL(`${BASE}/api/stream-comments/public`, window.location.origin);
+        const url = new URL(`${API_BASE}/api/stream-comments/public`, window.location.origin);
         if (phaseId) url.searchParams.set("phaseId", phaseId);
         if (teamId) url.searchParams.set("teamId", teamId);
         if (stream) url.searchParams.set("stream", stream);
