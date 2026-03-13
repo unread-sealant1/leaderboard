@@ -20,6 +20,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/admin/login" replace />} />
+      <Route path="/dashboard" element={<Navigate to="/admin/dashboard" replace />} />
 
       <Route path="/tv" element={<TvV2View />} />
 
@@ -45,6 +46,8 @@ export default function App() {
         <Route path="meta-skills" element={<MetaSkillsPage />} />
         <Route path="tv-settings" element={<TvSettingsPage />} />
       </Route>
+
+      <Route path="*" element={<Navigate to="/admin/login" replace />} />
     </Routes>
   );
 }
