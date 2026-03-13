@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "start": "npm --workspace server start",
-    "dev": "npm --workspace server run dev",
+    "dev": "npm --workspace server start",
+    "dev:local": "npm --workspace server run dev",
     "client:dev": "npm --workspace client run dev",
     "client:build": "npm --workspace client run build"
   },

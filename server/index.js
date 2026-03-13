@@ -39,8 +39,10 @@ async function ensurePostgresDatabaseExists() {
   if (!connectionString) return;
 
   const targetUrl = new URL(connectionString);
+  const host = String(targetUrl.hostname || "").trim().toLowerCase();
+  const isLocalHost = host === "localhost" || host === "127.0.0.1" || host === "::1";
   const databaseName = decodeURIComponent(targetUrl.pathname.replace(/^\//, "") || "");
-  if (!databaseName || databaseName === "postgres") return;
+  if (!databaseName || databaseName === "postgres" || !isLocalHost) return;
 
   const adminUrl = new URL(connectionString);
   adminUrl.pathname = "/postgres";
