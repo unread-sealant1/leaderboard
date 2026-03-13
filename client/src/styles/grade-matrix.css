@@ -1,0 +1,241 @@
+.gradeMatrix{
+  margin-top:16px;
+}
+
+.gradeMatrixScroller{
+  overflow:auto;
+  border:1px solid #DCE4EF;
+  border-radius:18px;
+  background:#FFFFFF;
+}
+
+.gradeMatrixTable{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  min-width:980px;
+}
+
+.gradeMatrixTable th,
+.gradeMatrixTable td{
+  border-right:1px solid #DCE4EF;
+  border-bottom:1px solid #DCE4EF;
+}
+
+.gradeMatrixTable th:last-child,
+.gradeMatrixTable td:last-child{
+  border-right:none;
+}
+
+.gradeMatrixTable tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.gradeMatrixGroupRow th,
+.gradeMatrixSubRow th{
+  text-align:center;
+  font-weight:950;
+  color:#0B1220;
+}
+
+.gradeMatrixFixedHead{
+  background:#F3F6FB;
+  padding:12px 10px;
+  min-width:68px;
+}
+
+.gradeMatrixStudentHead{
+  min-width:260px;
+  text-align:left;
+}
+
+.gradeMatrixGroup{
+  padding:10px 12px;
+  font-size:16px;
+}
+
+.gradeMatrixGroupMeta{
+  background:#F5E8EE;
+}
+
+.gradeMatrixGroupMetaAvg{
+  background:#EFD5E1;
+  min-width:110px;
+}
+
+.gradeMatrixGroupWeb{
+  background:#DDEBF9;
+}
+
+.gradeMatrixGroupWebAvg{
+  background:#CDE0F5;
+  min-width:118px;
+}
+
+.gradeMatrixGroupProgram{
+  background:#E8F1E0;
+  min-width:124px;
+}
+
+.gradeMatrixSubRow th{
+  padding:8px 10px;
+  background:#FAFBFD;
+  min-width:64px;
+  font-size:13px;
+}
+
+.gradeMatrixRank{
+  width:64px;
+  text-align:center;
+  font-weight:900;
+  color:#334155;
+  background:#F8FAFD;
+  padding:10px 8px;
+}
+
+.gradeMatrixStudent{
+  min-width:260px;
+  text-align:left;
+  padding:10px 12px;
+  background:#FFFFFF;
+}
+
+.gradeMatrixStudentName{
+  font-weight:900;
+  color:#0B1220;
+  line-height:1.1;
+}
+
+.gradeMatrixStudentMeta{
+  margin-top:4px;
+  color:#607089;
+  font-size:12px;
+  font-weight:800;
+}
+
+.gradeMatrixCell{
+  min-width:64px;
+  text-align:center;
+  padding:10px 8px;
+  font-weight:950;
+}
+
+.gradeMatrixAverage{}
+
+.gradeMatrixAverageDivider{
+  border-right:3px solid #344054 !important;
+}
+
+.gradeMatrixPager{
+  margin-top:10px;
+  text-align:right;
+  color:#607089;
+  font-size:12px;
+  font-weight:900;
+}
+
+.gradeMatrix-tv{
+  margin-top:12px;
+}
+
+.gradeMatrix-tv .gradeMatrixScroller{
+  border-radius:16px;
+}
+
+.gradeMatrix-tv .gradeMatrixGroup{
+  font-size:14px;
+  padding:8px 10px;
+}
+
+.gradeMatrix-tv .gradeMatrixSubRow th,
+.gradeMatrix-tv .gradeMatrixCell,
+.gradeMatrix-tv .gradeMatrixRank{
+  min-width:54px;
+  font-size:13px;
+  padding:8px 6px;
+}
+
+.gradeMatrix-tv .gradeMatrixStudent,
+.gradeMatrix-tv .gradeMatrixStudentHead{
+  min-width:210px;
+}
+
+.gradeMatrix-tv .gradeMatrixStudentName{
+  font-size:14px;
+}
+
+.gradeSummary{
+  margin-top:16px;
+}
+
+.gradeSummaryScroller{
+  overflow:auto;
+  border:1px solid #DCE4EF;
+  border-radius:18px;
+  background:#FFFFFF;
+}
+
+.gradeSummaryTable{
+  width:100%;
+  min-width:860px;
+  border-collapse:separate;
+  border-spacing:0;
+}
+
+.gradeSummaryTable th,
+.gradeSummaryTable td{
+  border-right:1px solid #DCE4EF;
+  border-bottom:1px solid #DCE4EF;
+}
+
+.gradeSummaryTable th:last-child,
+.gradeSummaryTable td:last-child{
+  border-right:none;
+}
+
+.gradeSummaryTable tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.gradeSummaryTable thead th{
+  padding:12px 10px;
+  background:#F7F9FC;
+  color:#0B1220;
+  font-size:13px;
+  font-weight:950;
+  text-align:center;
+}
+
+.gradeSummaryStudentHead{
+  min-width:260px;
+  text-align:left !important;
+}
+
+.gradeSummaryProgramHead{
+  min-width:120px;
+}
+
+.gradeSummaryStudent{
+  min-width:260px;
+  padding:12px 14px;
+  background:#FFFFFF;
+}
+
+.gradeSummaryStudentName{
+  color:#0B1220;
+  font-weight:900;
+}
+
+.gradeSummaryStudentMeta{
+  margin-top:4px;
+  color:#607089;
+  font-size:12px;
+  font-weight:800;
+}
+
+.gradeSummaryCell{
+  min-width:110px;
+  text-align:center;
+  padding:12px 10px;
+  font-weight:950;
+}

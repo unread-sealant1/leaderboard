@@ -1,0 +1,15 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+**/.env
+.env.*
+**/.env.*
+*.log
+*.sqlite
+*.sqlite3
+*.db
+server/ihub_v2.db
+.DS_Store
+Thumbs.db
